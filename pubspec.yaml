@@ -63,6 +63,31 @@ flutter:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 
+  fonts:
+    - family: SCoreDream
+      fonts:
+        - asset: assets/fonts/SCDream1.otf
+          weight: 100
+        - asset: assets/fonts/SCDream2.otf
+          weight: 200
+        - asset: assets/fonts/SCDream3.otf
+          weight: 300
+        - asset: assets/fonts/SCDream4.otf
+          weight: 400
+        - asset: assets/fonts/SCDream5.otf
+          weight: 500
+        - asset: assets/fonts/SCDream6.otf
+          weight: 600
+        - asset: assets/fonts/SCDream7.otf
+          weight: 700
+        - asset: assets/fonts/SCDream8.otf
+          weight: 800
+        - asset: assets/fonts/SCDream9.otf
+          weight: 900
+    - family: BagelFatOne
+      fonts:
+        - asset: assets/fonts/BagelFatOne.ttf
+
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 
