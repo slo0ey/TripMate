@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: appName,
       theme: ThemeData(
+        fontFamily: 'SCoreDream',
         colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xff6CA6CD)),
         useMaterial3: true,
       ),
