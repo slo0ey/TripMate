@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'package:tripmate/constants.dart';
 import 'package:tripmate/pages/Home.dart';
 
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       title: appName,
       theme: ThemeData(
         fontFamily: 'SCoreDream',
-        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xff6CA6CD)),
+        colorScheme: ColorScheme.fromSeed(seedColor: baseColor),
         useMaterial3: true,
       ),
       home: const Home(),

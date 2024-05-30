@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
+import 'package:tripmate/utils/ViewMode.dart';
+
 typedef ViewModeUpdater = void Function(ViewMode);
 typedef _OnPressed = void Function();
-
-enum ViewMode { big, grid, medium, list }
 
 class ViewModeSelector extends StatelessWidget {
   const ViewModeSelector(
