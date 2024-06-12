@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 import 'package:tripmate/constants.dart';
+import 'package:tripmate/models/Travel.dart';
 import 'package:tripmate/utils/ViewMode.dart';
+import 'package:tripmate/widgets/TravelListView.dart';
 import 'package:tripmate/widgets/ViewModeSelector.dart';
 
 class Home extends StatefulWidget {
@@ -13,6 +15,20 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   ViewMode _viewMode = ViewMode.big;
+  final List<CompactTravel> _travelList = [
+    CompactTravel(
+        title: '대한민국',
+        countryCode: 'KR',
+        startDay: DateTime.now(),
+        endDay: DateTime.now().add(const Duration(days: 1)),
+        budget: 100000),
+    CompactTravel(
+        title: '미국',
+        countryCode: 'US',
+        startDay: DateTime.now(),
+        endDay: DateTime.now().add(const Duration(days: 6)),
+        budget: 5700000)
+  ];
 
   void _setViewMode(ViewMode viewMode) {
     setState(() {
@@ -56,7 +72,12 @@ class _HomeState extends State<Home> {
                       borderRadius: BorderRadius.circular(12.0)),
                   child: const Center(
                     child: Text("로그인이 되어 있지 않습니다. 로그인을 해주시기 바랍니다."),
-                  ))
+                  )),
+              TravelListView(context, '다가오는 여행', _travelList, _viewMode),
+              TravelListView(context, '지난 여행', List.empty(), _viewMode),
+              const SizedBox(
+                height: 32.0,
+              )
             ],
           ),
         ),
